@@ -66,7 +66,7 @@ if(keypressed=="37"){
     console.log("left");
 
 }
-if(keypressed==("40-1")){
+if(keypressed==("39")){
     right();
     console.log("right");
 
@@ -99,4 +99,40 @@ if(keypressed=="67"){
                 
                 
                     
+}
+function up(){
+    if(player_y>0)
+{
+    player_y=player_y-blockimageheight;
+    canvas.remove(playerobject);
+    playerupdate();
+    
+}
+}
+function down(){
+    if(player_y<=500)
+{
+    player_y=player_y+blockimageheight;
+    canvas.remove(playerobject);
+    playerupdate();
+    
+}
+}
+function left(){
+    if(player_x>0)
+{
+    player_x=player_x-blockimagewidth;
+    canvas.remove(playerobject);
+    playerupdate();
+    
+}
+}
+function right(){
+    if(player_x<=850)
+{
+    player_x=player_x+blockimagewidth;
+    canvas.remove(playerobject);
+    playerupdate();
+    
+}
 }
